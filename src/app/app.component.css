@@ -1,0 +1,31 @@
+.main-display {
+    width: 600px;
+    height: 600px;
+    padding: 100px;
+    display: inline-flex;
+    column-gap: 50px;
+}
+
+
+.subject-item {
+    display:inline-flex;
+    column-gap: 10px;
+    align-items: center;
+    background: none;
+	color: inherit;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.subject-colour {
+    width: 10px;
+    height: 10px;
+    border: solid black 1.8px;
+}
+
+.subject-name, .selected {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}

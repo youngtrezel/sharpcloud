@@ -1,0 +1,21 @@
+<div class="dropdown is-active">
+    <div class="dropdown-trigger">
+        <div class="ddl-preview">
+            <div class="subject-item">
+                <div class="subject-colour" [style.backgroundColor]="currentSubject.Colour"></div>
+                <div class="subject-name">{{currentSubject.Name}}</div>
+            </div>
+        </div>
+        <button class="ddl-button" (click)="showOptions()" >&#x25BC;</button>
+    </div>
+    <div [appOutSideClick]="showMenu" (outSideClick)="showMenu = false" [className]="showMenu ? 'dropdown-menu.is-active' : 'dropdown-menu'" id="dropdown-menu" role="menu">
+      <div class="dropdown-content">
+        @for(subject of subjects; track $index) {
+            <button class="subject-item" [value]="subject" (click)="updateSubject(subject)">
+                <div class="subject-colour" [style.backgroundColor]="subject.Colour"></div>
+                <div class="subject-name">{{subject.Name}}</div>
+            </button>
+        }        
+      </div>
+    </div>
+  </div>

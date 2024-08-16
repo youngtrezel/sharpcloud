@@ -1,0 +1,19 @@
+<div class="main-display">
+
+  <my-dropdown (updateSubjectEvent)="updateSubject($event)" [subjects]="subjects"></my-dropdown>
+
+  <div class="selected">
+    Selected subject:
+    <div class="chosen-subject">
+      <div class="subject-item">
+        <div class="subject-colour" [style.backgroundColor]="selectedSubject.Colour"></div>
+        <div class="subject-name">{{selectedSubject.Name}}</div>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+</div>
+
